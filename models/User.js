@@ -26,6 +26,11 @@ UserAddress: {
     type: 'string',
     required: true
 
+},
+
+UserPassword: {
+    type:'string',
+    required:true
 }
 
 }); 

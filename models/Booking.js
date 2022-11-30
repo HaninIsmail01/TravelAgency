@@ -28,7 +28,7 @@ const UserSchema= new Schema({
     },
 
     BookingDate: {
-        type: 'date',
+        type: 'string',
         required: true
     }
     
