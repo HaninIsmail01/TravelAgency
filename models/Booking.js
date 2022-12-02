@@ -1,6 +1,6 @@
 const {Schema, model}= require('mongoose');
 
-const UserSchema= new Schema({
+const BookingSchema= new Schema({
 
     BookingType: {
         type: 'string',
@@ -31,7 +31,8 @@ const UserSchema= new Schema({
         type: 'string',
         required: true
     }
-    
-    
-    
     }); 
+
+    const BookingModel = model('booking', BookingSchema);
+
+    module.exports = BookingModel;
