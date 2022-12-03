@@ -2,11 +2,6 @@ const {Schema, model}= require('mongoose');
 
 const UserSchema= new Schema({
 
-    HotelId: {
-        type: 'intger',
-        required: true
-    },
-    
     
     Hoteladdress: {
         type: 'string',

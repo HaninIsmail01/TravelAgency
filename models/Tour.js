@@ -2,13 +2,6 @@ const {Schema, model}= require('mongoose');
 
 const UserSchema= new Schema({
 
-    
-    
-    TourID: {
-        type: 'intger',
-        required: true
-    },
-    
     TourDescription: {
         type: 'string',
         required: true

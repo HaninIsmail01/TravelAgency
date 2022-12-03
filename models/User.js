@@ -7,11 +7,6 @@ UserName: {
     required: true
 },
 
-UserID: {
-    type: 'intger',
-    required: true
-},
-
 UserGender: {
     type: 'string',
     required: true
