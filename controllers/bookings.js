@@ -3,7 +3,7 @@ const bookingsService = require('../services/bookings');
 module.exports.getBookings = async (req,res) => {
     try{
         const bookings = await bookingsService.retrieveBooking();
-        res.send({products});
+        res.send({bookings});
     }
     catch(err){
         res.status(500);

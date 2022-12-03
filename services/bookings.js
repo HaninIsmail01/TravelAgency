@@ -13,6 +13,7 @@ module.exports.retrieveBooking = async () => {
 module.exports.makeBooking = async (bookinginfo) => {
     try{
         const booking = new BookingModel({
+            
             //
         });
         const createdBooking = await booking.save();
