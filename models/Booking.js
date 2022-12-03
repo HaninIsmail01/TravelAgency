@@ -8,14 +8,10 @@ const BookingSchema= new Schema({
     },
     
     BookingTitle: {
-        type: 'srting',
+        type: 'string',
         required: true
     },
 
-    BookingHotel_id: {
-        type: 'intger',
-        required: true
-    },
 
     BookingDate: {
         type: 'string',

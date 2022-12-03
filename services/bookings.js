@@ -1,4 +1,4 @@
-const BookingModel = require('../model/Booking');
+const BookingModel = require('../models/Booking');
 
 module.exports.retrieveBooking = async () => {
     try{

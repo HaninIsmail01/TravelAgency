@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 const initializeDBConnection = require(`./config/db`);
 
-const bookingssRouter = require('./routes/bookings');
+const bookingsRouter = require('./routes/bookings');
 
 dotenv.config({
   path: './config/.env'
@@ -14,7 +14,7 @@ const PORT = process.env.PORT;
 const app = express();
 app.use(express.json());
 
-app.use('/bookings', bookingssRouter);
+app.use('/bookings', bookingsRouter);
 
 
 app.listen(PORT, async () => { 
