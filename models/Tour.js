@@ -1,6 +1,6 @@
 const {Schema, model}= require('mongoose');
 
-const UserSchema= new Schema({
+const TourSchema= new Schema({
 
     TourDescription: {
         type: 'string',
@@ -26,12 +26,8 @@ const UserSchema= new Schema({
         type: 'string',
         required: true
     }
-    
+ }); 
 
-    
+ const TourModel = model('Tour', TourSchema);
 
-    
-    
-    
-    
-    }); 
+ module.exports = TourModel;

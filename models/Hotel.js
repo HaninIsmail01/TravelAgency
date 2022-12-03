@@ -1,15 +1,13 @@
 const {Schema, model}= require('mongoose');
 
-const UserSchema= new Schema({
+const HotelSchema = new Schema({
 
     
     Hoteladdress: {
         type: 'string',
         required: true
     },
-    
-   
-    
+        
     HotelRent: {
         type: 'string',
         required: true
@@ -24,12 +22,9 @@ const UserSchema= new Schema({
         type: 'string',
         required: true
     },
-
-    HotelType: {
-        type: 'string',
-        required: true
-    }
-    
-    
     
     }); 
+    
+    const HotelModel = model('Hotel', HotelSchema);
+
+    module.exports = HotelModel;

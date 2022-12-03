@@ -1,6 +1,6 @@
 const {Schema, model}= require('mongoose');
 
-const UserSchema= new Schema({
+const ReviewSchema = new Schema({
 
     ReviewDescription: {
         type: 'string',
@@ -18,3 +18,7 @@ const UserSchema= new Schema({
     }
     
 });
+
+const ReviewModel = model('Review', ReviewSchema);
+
+module.exports = ReviewModel;

@@ -2,7 +2,6 @@ const {Schema, model}= require('mongoose');
 
 const BookingSchema= new Schema({
 
- 
     BookingDescription: {
         type: 'string',
         required: true
