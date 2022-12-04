@@ -1,4 +1,4 @@
-const {Schema, model}= require('mongoose');
+const {Schema, model, SchemaType}= require('mongoose');
 
 const UserSchema= new Schema({
 
@@ -26,6 +26,12 @@ address: {
 password: {
     type:'string',
     required:true
+},
+
+bookingId: {
+    type: Schema.Types.ObjectId,
+    ref: 'booking',
+    required: true
 }
 
 }); 

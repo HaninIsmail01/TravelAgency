@@ -1,4 +1,5 @@
 const bcrypt = require('bcrypt');
+const { ObjectId } = require('mongoose').Types;
 
 const UserModel = require('../models/User');
 
@@ -13,7 +14,8 @@ module.exports.RegisterUser = async (userInfo) => {
         password: hashedPassword,
         gender: userInfo.gender,
         telephone: userInfo.telephone,
-        address: userInfo.address
+        address: userInfo.address,
+        bookingId: new ObjectId(userInfo.bookingId)
       });
   
       await newUser.save();
