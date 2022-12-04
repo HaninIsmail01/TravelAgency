@@ -2,32 +2,32 @@ const {Schema, model}= require('mongoose');
 
 const TourSchema= new Schema({
 
-    TourDescription: {
+    tourActivities: {
         type: 'string',
         required: true
     },
     
-    TourName: {
+    tourName: {
         type: 'string',
         required: true
     },
 
-    TourDate: {
+    date: {
         type: 'date',
         required: true
     },
 
-    TourPrice: {
+    price: {
         type: 'number',
         required: true
     },
 
-    TourFlight: {
+    flightNumber: {
         type: 'string',
-        required: true
+        required: false
     }
  }); 
 
- const TourModel = model('Tour', TourSchema);
+ const TourModel = model('tour', TourSchema);
 
  module.exports = TourModel;
