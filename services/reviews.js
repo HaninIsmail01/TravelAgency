@@ -21,6 +21,6 @@ module.exports.makeReview = async (ReviewInfo) => {
         return createdReview;
     }
     catch(err){
-        throw new Error(`Couldn't make bookings`);
+        throw new Error(`Couldn't add review`);
     }
 }
