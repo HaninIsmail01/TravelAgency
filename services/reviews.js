@@ -1,6 +1,6 @@
 const ReviewModel = require('../models/Review');
 
-module.exports.retrieveReview = async () => {
+module.exports.ViewPastReviews = async () => {
     try{
         const Reviews = await ReviewModel.find();
         return Reviews;
@@ -10,7 +10,7 @@ module.exports.retrieveReview = async () => {
     }
 }
 
-module.exports.makeReview = async (ReviewInfo) => {
+module.exports.AddReviews = async (ReviewInfo) => {
     try{
         const Review = new ReviewModel({
             ReviewDescription: ReviewInfo.ReviewDescription,
