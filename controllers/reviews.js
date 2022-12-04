@@ -15,7 +15,9 @@ module.exports.getReviews = async (req,res) => {
 
 module.exports.postReviews = async (req,res) => {
     const ReviewInfo= {
-        //
+        ReviewDescription: req.body.ReviewDescription,
+            ReviewRating: req.body.ReviewRating,
+            ReviewDate: req.body.ReviewDate
     };
     try{
         const createdReview = await bookingsService.makeReview(ReviewInfo);

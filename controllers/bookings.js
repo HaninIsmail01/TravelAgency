@@ -15,7 +15,9 @@ module.exports.getBookings = async (req,res) => {
 
 module.exports.postBooking = async (req,res) => {
     const bookinginfo= {
-        //
+        BookingDescription: req.body.BookingDescription,
+        BookingTitle: req.body.BookingTitle,
+        BookingDate: req.body.BookingDate
     };
     try{
         const createdBooking = await bookingsService.makeBooking(bookinginfo);

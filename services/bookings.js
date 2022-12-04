@@ -13,8 +13,9 @@ module.exports.retrieveBooking = async () => {
 module.exports.makeBooking = async (bookinginfo) => {
     try{
         const booking = new BookingModel({
-            
-            //
+            BookingDescription: bookinginfo.BookingDescription,
+            BookingTitle: bookinginfo.BookingTitle,
+            BookingDate: bookinginfo.BookingDate
         });
         const createdBooking = await booking.save();
         return createdBooking;

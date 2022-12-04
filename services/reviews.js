@@ -13,7 +13,9 @@ module.exports.retrieveReview = async () => {
 module.exports.makeReview = async (ReviewInfo) => {
     try{
         const Review = new ReviewModel({
-            
+            ReviewDescription: ReviewInfo.ReviewDescription,
+            ReviewRating: ReviewInfo.ReviewRating,
+            ReviewDate: ReviewInfo.ReviewDate
         });
         const createdReview = await Review.save();
         return createdReview;

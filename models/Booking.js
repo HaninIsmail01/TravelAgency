@@ -12,7 +12,6 @@ const BookingSchema= new Schema({
         required: true
     },
 
-
     BookingDate: {
         type: 'string',
         required: true
