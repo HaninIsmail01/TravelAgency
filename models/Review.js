@@ -8,7 +8,7 @@ const ReviewSchema = new Schema({
     },
     
     ReviewRating: {
-        type: 'intger',
+        type: 'number',
         required: true
     },
 
