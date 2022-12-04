@@ -1,21 +1,32 @@
 const {Schema, model}= require('mongoose');
 
 const BookingSchema= new Schema({
-
-    BookingDescription: {
-        type: 'string',
+    BookingType: {
+        type: 'string', //either a hotel or a tour  
         required: true
     },
-    
-    BookingTitle: {
-        type: 'string',
-        required: true
+
+    HotelID: {
+        type: Schema.Types.ObjectId,
+        ref: 'hotel',
+        required: false
+    },
+
+    TourID: {
+        type: Schema.Types.ObjectId,
+        ref: 'tour',
+        required: false
     },
 
     BookingDate: {
         type: 'string',
         required: true
-    }
+    }, 
+
+    Price: {
+        type: number,
+        required: true
+    },
     }); 
 
     const BookingModel = model('booking', BookingSchema);
