@@ -13,7 +13,7 @@ gender: {
 },
 
 telephone: {
-    type: 'intger',
+    type: 'number',
     required: true
 },
 
@@ -26,12 +26,6 @@ address: {
 password: {
     type:'string',
     required:true
-},
-
-bookingId: {
-    type: Schema.Types.ObjectId,
-    ref: 'booking',
-    required: true
 }
 
 }); 

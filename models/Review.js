@@ -2,18 +2,18 @@ const {Schema, model}= require('mongoose');
 
 const ReviewSchema = new Schema({
 
-    ReviewDescription: {
+    reviewDescription: {
         type: 'string',
         required: true
     },
     
-    ReviewRating: {
+    reviewRating: {
         type: 'number',
         required: true
     },
 
-    ReviewDate: {
-        type: 'date',
+    reviewDate: {
+        type: 'string',
         required: false
     }
     
