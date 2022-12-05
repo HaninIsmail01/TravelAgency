@@ -15,6 +15,7 @@ module.exports.RegisterUser = async (userInfo) => {
         gender: userInfo.gender,
         telephone: userInfo.telephone,
         address: userInfo.address,
+        role: userInfo.role,
         bookingId: new ObjectId(userInfo.bookingId)
       });
   

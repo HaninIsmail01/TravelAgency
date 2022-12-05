@@ -28,6 +28,11 @@ password: {
     required:true
 },
 
+role: {  //either admin or user
+    type:'string',
+    required: true
+},
+
 bookingID: {
     type: Schema.Types.ObjectId,
     ref: 'booking',

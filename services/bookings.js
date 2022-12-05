@@ -10,6 +10,16 @@ module.exports.retrieveBooking = async () => {
     }
 }
 
+module.exports.retrieveBookingByID = async (bookingId) => {
+    try{
+        const booking = await BookingModel.findById(bookingId);
+        return booking;
+    }
+    catch(err){
+        throw new Error(`Couldn't find bookings`);
+    }
+}
+
 module.exports.makeBooking = async (bookinginfo) => {
     try{
         const booking = new BookingModel({
