@@ -27,6 +27,6 @@ app.use('/reviews', ReviewsRouter);
 app.listen(PORT, async () => { 
   console.log(`listening to port number ${PORT}`);
 
-  //calling the Asyn function to initiate DB connection when server starts.
+  //calling the Async function to initiate DB connection when server starts.
   await initializeDBConnection();
 });
