@@ -26,6 +26,19 @@ address: {
 password: {
     type:'string',
     required:true
+},
+
+bookingID: {
+    type: Schema.Types.ObjectId,
+    ref: 'booking',
+    required: false
+
+}, 
+
+reviewID: {
+    type: Schema.Types.ObjectId,
+    ref: 'review',
+    required: false
 }
 
 }); 

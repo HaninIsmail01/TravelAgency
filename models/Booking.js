@@ -17,10 +17,8 @@ const BookingSchema= new Schema({
         required: false
     },
 
-    tourID: {
-        type: Schema.Types.ObjectId,
-        ref: 'tour',
-        required: false
+    tour: {
+        
     },
 
     bookingDate: {
