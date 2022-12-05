@@ -24,22 +24,34 @@ module.exports.RegisterUser = async (userInfo) => {
     }
   };
 
-  module.exports.LoginUser = async (UserName, password) => {
-try {
-    // find user that has the same username
+  module.exports.doesUserExist = async (username) => {
     const existingUser = await UserModel.findOne({
-        UserName: UserName,
+      username: username
     });
-    // compare the plaintext password with the user's hashed password in the db.
-    let isCorrectPassword = bcrypt.compare(password, existingUser.password);
+  
+    if (existingUser) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
-    if (existingUser && isCorrectPassword) {
-        return existingUser;
+  module.exports.LoginUser = async (username, password) => {
+    try {
+      // find user that has the same username
+      const user = await UserModel.findOne({
+        username: username
+      });
+  
+      // compare the plaintext password with the user's hashed password in the db.
+      let isCorrectPassword = bcrypt.compare(password, user.password);
+  
+      if (isCorrectPassword) {
+        return user;
       } else {
         return null;
       }
-    
-} catch (error) {
-    throw new Error('Error Loging in, please check username and password then try again.');
-}
+    } catch (error) {
+      throw new Error('Error with user credentials, please check username and password.');
+    }
   };
