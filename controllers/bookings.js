@@ -16,9 +16,9 @@ module.exports.getBookings = async (req,res) => {
 module.exports.postBooking = async (req,res) => {
     const bookinginfo= {
         bookingType: req.body.bookingType,
-        hotelID: req.body.hotelID,
+        hotel: req.body.hotel,
         numberOfRooms: req.body.numberOfRooms,
-        tourID: req.body.tourID,
+        tour: req.body.tour,
         BookingDate: req.body.BookingDate,
         price: req.body.price
     };

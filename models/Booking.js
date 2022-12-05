@@ -1,6 +1,7 @@
 const {Schema, model}= require('mongoose');
 
 const BookingSchema= new Schema({
+
     bookingType: {
         type: 'string', //either a hotel or a tour  
         required: true
@@ -9,22 +10,22 @@ const BookingSchema= new Schema({
     hotel: {
         name: {
             type: 'string',
-            required: true
+            required: false
         },
     
         price: { //per one room
             type: 'number',
-            required: true
+            required: false
         },
         
         services: {
             type: 'string', //Breakfast, pool, etc.
-            required: true
+            required: false
         },
     
         roomType: {
             type: 'string', // single or double 
-            required: true
+            required: false
         },
     },
 
@@ -36,22 +37,22 @@ const BookingSchema= new Schema({
     tour: {
         tourActivities: {
             type: 'string',
-            required: true
+            required: false
         },
         
         tourName: {
             type: 'string',
-            required: true
+            required: false
         },
     
         date: {
-            type: 'date',
-            required: true
+            type: 'string',
+            required: false
         },
     
         price: {
             type: 'number',
-            required: true
+            required: false
         },
     
         flightNumber: {

@@ -14,16 +14,30 @@ module.exports.makeBooking = async (bookinginfo) => {
     try{
         const booking = new BookingModel({
             bookingType: bookinginfo.bookingType,
-            hotelID: new obejectId(bookinginfo.hotelID),
+
+            hotel :{
+                name: bookinginfo.name,
+                price: bookinginfo.price,
+                services: bookinginfo.services,
+                roomType: bookinginfo.roomType
+            },
             numberOfRooms: bookinginfo.numberOfRooms,
-            tourID: new obejectId(bookinginfo.tourID),
-            BookingDate: bookinginfo.BookingDate,
+
+            tour :{
+                tourActivities: bookinginfo.tourActivities,
+                tourName: bookinginfo.tourName,
+                date: bookinginfo.date,
+                price: bookinginfo.price,
+                flightNumber: bookinginfo.flightNumber
+            },
+            bookingDate: bookinginfo.bookingDate,
             price: bookinginfo.price
+
         });
         const createdBooking = await booking.save();
         return createdBooking;
     }
     catch(err){
-        throw new Error(`Couldn't make bookings`);
+        throw new Error(err);
     }
 }

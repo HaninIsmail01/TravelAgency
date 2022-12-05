@@ -3,5 +3,7 @@ Content-Type: application/json
 
 {
     "bookingType": "hotel",
-    "price": 1000
+    "bookingDate": "12-10-22",
+    "price": 1750
+
 }
