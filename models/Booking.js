@@ -13,7 +13,7 @@ const BookingSchema= new Schema({
     },
 
     numberOfRooms: { //if a hotel is booked, this will represent the number of rooms booked
-        type: 'integer', 
+        type: 'number', 
         required: false
     },
 

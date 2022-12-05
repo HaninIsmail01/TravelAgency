@@ -4,6 +4,7 @@ const ReviewsService = require('../services/reviews')
 module.exports.getReviews = async (req,res) => {
     try {
         const reviews = await ReviewsService.ViewPastReviews();
+        res.send({reviews});
 
     } catch (error) {
         res.status(500);
