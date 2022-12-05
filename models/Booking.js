@@ -6,10 +6,26 @@ const BookingSchema= new Schema({
         required: true
     },
 
-    hotelID: {
-        type: Schema.Types.ObjectId,
-        ref: 'hotel',
-        required: false
+    hotel: {
+        name: {
+            type: 'string',
+            required: true
+        },
+    
+        price: { //per one room
+            type: 'number',
+            required: true
+        },
+        
+        services: {
+            type: 'string', //Breakfast, pool, etc.
+            required: true
+        },
+    
+        roomType: {
+            type: 'string', // single or double 
+            required: true
+        },
     },
 
     numberOfRooms: { //if a hotel is booked, this will represent the number of rooms booked
@@ -18,6 +34,30 @@ const BookingSchema= new Schema({
     },
 
     tour: {
+        tourActivities: {
+            type: 'string',
+            required: true
+        },
+        
+        tourName: {
+            type: 'string',
+            required: true
+        },
+    
+        date: {
+            type: 'date',
+            required: true
+        },
+    
+        price: {
+            type: 'number',
+            required: true
+        },
+    
+        flightNumber: {
+            type: 'string',
+            required: false
+        }
         
     },
 

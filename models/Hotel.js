@@ -19,7 +19,7 @@ const HotelSchema = new Schema({
     roomType: {
         type: 'string', // single or double 
         required: true
-    },
+    }
 
     }); 
     
