@@ -14,7 +14,7 @@ const ReviewSchema = new Schema({
 
     ReviewDate: {
         type: 'date',
-        required: true
+        required: false
     }
     
 });

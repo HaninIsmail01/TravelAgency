@@ -1,0 +1,7 @@
+POST  http://localhost:5000/reviews
+Content-Type: application/json
+
+{
+    "ReviewDescription": "very good hotel, excellent service",
+    "ReviewRating": 10
+}

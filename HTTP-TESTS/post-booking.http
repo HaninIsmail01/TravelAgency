@@ -1,0 +1,7 @@
+POST  http://localhost:5000/bookings
+Content-Type: application/json
+
+{
+    "bookingType": "hotel",
+    "price": 1000
+}

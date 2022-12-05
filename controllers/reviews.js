@@ -21,10 +21,10 @@ module.exports.postReviews = async (req,res) => {
         ReviewDate: req.body.ReviewDate
     };
     try{
-        const createdReview = await bookingsService.AddReviews(ReviewInfo);
+        const createdReview = await ReviewsService.AddReviews(ReviewInfo);
         
         return res.status(201).send({
-            msg: 'Booking Successful',
+            msg: ' Review uploaded successfully',
             ReviewId: createdReview._id
         });
     }
