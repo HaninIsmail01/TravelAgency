@@ -1,0 +1,7 @@
+DELETE   http://localhost:5000/bookings/638e44b3e5c9ecaa5d421e1c
+Content-Type: application/json
+
+{
+    "_id": "638e44b3e5c9ecaa5d421e1c"
+
+}
