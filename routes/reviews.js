@@ -9,5 +9,6 @@ const ReviewsRouter = Router();
 
 ReviewsRouter.get('/', ReviewsController.getReviews);
 ReviewsRouter.post('/', ReviewsController.postReviews);
+ReviewsRouter.delete('/:bookingID', ReviewsController.deleteReview);
 
 module.exports = ReviewsRouter;

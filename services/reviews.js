@@ -24,3 +24,11 @@ module.exports.AddReviews = async (ReviewInfo) => {
         throw new Error(`Couldn't add review`);
     }
 }
+module.exports.cancelReview = async (ReviewId) => {
+    try{
+        await ReviewModel.deleteOne({_id: ObjectID(ReviewId)});
+    }
+    catch(err){
+        throw new Error(`Couldn't delete review`);
+    }
+}

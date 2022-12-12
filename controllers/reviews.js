@@ -1,7 +1,6 @@
 
 const {validationResult} = require('express-validator');
-
-const ReviewsService = require('../services/reviews')
+const ReviewsService = require('../services/reviews');
 var ObjectID = require('mongodb').ObjectId;
 
 module.exports.getReviews = async (req,res) => {
@@ -44,5 +43,19 @@ module.exports.postReviews = async (req,res) => {
         return res.status(500).send({
             error: err.message
         });
+    }
+};
+
+module.exports.deleteReview = async (req, res) => {
+    const ReviewId = req.body._id;
+    try {
+      await ReviewsService.cancelReview(ReviewId);
+      return res.send({
+        msg: 'Review deleted successfully.'
+      });
+    } catch (err) {
+      return res.status(500).send({
+        error: err.message
+      });
     }
 };
