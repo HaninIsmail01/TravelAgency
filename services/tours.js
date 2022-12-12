@@ -1,5 +1,7 @@
 const TourModel = require("../models/Tour");
 
+var ObjectID = require('mongodb').ObjectId;
+
 module.exports.viewPastTour = async () => {
     try{
         const Tour = await TourModel.find();
@@ -33,13 +35,5 @@ module.exports.cancelTour = async (tourId) => {
     }
     catch(err){
         throw new Error(`Couldn't remove Tour`);
-    }
-}
-
-module.exports.updateTour = async () => {
-    try {
-        
-    } catch (error) {
-        throw new Error(`Couldn't update Tour`);
     }
 }

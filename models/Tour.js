@@ -13,7 +13,7 @@ const TourSchema= new Schema({
     },
 
     date: {
-        type: 'date',
+        type: 'string',
         required: true
     },
 

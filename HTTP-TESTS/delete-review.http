@@ -1,0 +1,7 @@
+DELETE   http://localhost:5000/reviews/638dce130864d27df8a0a85f
+Content-Type: application/json
+
+{
+    "_id": "638dce130864d27df8a0a85f"
+
+}

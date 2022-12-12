@@ -1,4 +1,5 @@
 const ReviewModel = require('../models/Review');
+var ObjectID = require('mongodb').ObjectId;
 
 module.exports.ViewPastReviews = async () => {
     try{
@@ -13,9 +14,9 @@ module.exports.ViewPastReviews = async () => {
 module.exports.AddReviews = async (ReviewInfo) => {
     try{
         const Review = new ReviewModel({
-            ReviewDescription: ReviewInfo.ReviewDescription,
-            ReviewRating: ReviewInfo.ReviewRating,
-            ReviewDate: ReviewInfo.ReviewDate
+            reviewDescription: ReviewInfo.reviewDescription,
+            reviewRating: ReviewInfo.reviewRating,
+            reviewDate: ReviewInfo.reviewDate
         });
         const createdReview = await Review.save();
         return createdReview;

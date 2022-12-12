@@ -1,0 +1,11 @@
+POST http://localhost:5000/tours
+Content-Type: application/json
+
+{
+    "tourActivities" : "mohamed",
+    "tourName" : "Be Smile",
+    "date" : "12-12-12",
+    "price" : "1500",
+    "flightNumber" : "20H"  
+
+}

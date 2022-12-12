@@ -2,6 +2,8 @@ POST  http://localhost:5000/reviews
 Content-Type: application/json
 
 {
-    "ReviewDescription": "very good hotel, excellent service",
-    "ReviewRating": 10
+    "reviewDescription" : "very good hotel, excellent service",
+    "reviewRating" : 10,
+    "reviewDate" :"12-12-12"
+
 }

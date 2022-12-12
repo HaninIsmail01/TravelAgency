@@ -27,9 +27,9 @@ module.exports.postReviews = async (req,res) => {
     }  
     
     const ReviewInfo= {
-        ReviewDescription: req.body.ReviewDescription,
-        ReviewRating: req.body.ReviewRating,
-        ReviewDate: req.body.ReviewDate
+      reviewDescription: req.body.reviewDescription,
+      reviewRating: req.body.reviewRating,
+      reviewDate: req.body.reviewDate
     };
     try{
         const createdReview = await ReviewsService.AddReviews(ReviewInfo);

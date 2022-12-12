@@ -35,7 +35,6 @@ module.exports.postTour = async (req,res) => {
     };
     try{
         const createdTour = await ToursService.addTour(TourInfo);
-        
         return res.status(201).send({
             msg: ' Tour added successfully',
             TourId: createdTour._id
@@ -51,7 +50,7 @@ module.exports.postTour = async (req,res) => {
 module.exports.deleteTour = async (req, res) => {
     const TourId = req.body._id;
     try {
-      await TourModel.cancelTour(TourId);
+      await ToursService.cancelTour(TourId);
       return res.send({
         msg: 'Tour deleted successfully.'
       });

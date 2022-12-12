@@ -8,6 +8,6 @@ const TourRouter = Router();
 
 TourRouter.get('/', TourController.getTours);
 TourRouter.post('/', TourController.postTour);
-TourRouter.delete('/:tourID', TourController.deleteTour);
+TourRouter.delete('/:TourId', TourController.deleteTour);
 
 module.exports = TourRouter;
