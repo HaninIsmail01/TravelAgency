@@ -5,6 +5,6 @@ const TourRouter = Router();
 
 ReviewsRouter.get('/', TourController.getTours);
 ReviewsRouter.post('/', TourController.postTour);
-bookingsRouter.delete('/:bookingID', TourController.deleteTour);
+bookingsRouter.delete('/:tourID', TourController.deleteTour);
 
-module.exports = TourRouter;
+module.exports = ToursRouter;

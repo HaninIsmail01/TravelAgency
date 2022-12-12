@@ -9,6 +9,10 @@ const initializeDBConnection = require(`./config/db`);
 // imports each service's Router 
 const bookingsRouter = require('./routes/bookings');
 const ReviewsRouter = require('./routes/reviews');
+const ToursRouter = require('./routes/tours');
+const UsersRouter = require('./routes/users');
+const HotelsRouter = require('./routes/reviews');
+
 // parsing the dotenv file, to use the environment variables.
 dotenv.config({
   path: './config/.env'
@@ -23,6 +27,9 @@ app.use(express.json());
 // meaning that any route inside bookingsRouter will be prefixed by '/bookings' first
 app.use('/bookings', bookingsRouter);
 app.use('/reviews', ReviewsRouter);
+app.use('/tours', ToursRouter);
+app.use('/users', UsersRouter);
+app.use('/hotels', HotelsRouter);
 
 app.listen(PORT, async () => { 
   console.log(`listening to port number ${PORT}`);
