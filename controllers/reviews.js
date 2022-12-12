@@ -1,4 +1,5 @@
 // importing the ReviewsService for the Service controller 
+const {validationResult} = require('express-validator');
 const ReviewsService = require('../services/reviews')
 var ObjectID = require('mongodb').ObjectId;
 
@@ -16,6 +17,15 @@ module.exports.getReviews = async (req,res) => {
 }
 
 module.exports.postReviews = async (req,res) => {
+    
+    const validationErrors = validationResult(req).array();
+    if (validationErrors.length > 0) {
+      const firstError = validationErrors[0];
+      return res.status(422).send({
+        error: firstError.msg
+      });
+    }  
+    
     const ReviewInfo= {
         ReviewDescription: req.body.ReviewDescription,
         ReviewRating: req.body.ReviewRating,

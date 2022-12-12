@@ -1,5 +1,8 @@
 const { Router }= require('express');
 
+
+const ReviewsValidators = require('../validators/reviews');
+
 const ReviewsController = require('../controllers/reviews');
 
 const ReviewsRouter = Router();
