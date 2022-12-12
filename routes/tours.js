@@ -8,4 +8,4 @@ TourRouter.get('/', TourController.getTours);
 TourRouter.post('/', TourController.postTour);
 TourRouter.delete('/:tourID', TourController.deleteTour);
 
-module.exports = ToursRouter;
+module.exports = TourRouter;
