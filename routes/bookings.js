@@ -10,6 +10,6 @@ bookingsRouter.get('/', bookingsController.getBookings);
 bookingsRouter.get('/:bookingID', bookingsController.getBooking);
 bookingsRouter.post('/', bookingsController.postBooking);
 bookingsRouter.delete('/:bookingID', bookingsController.deleteBooking);
-bookingsRouter.put('/:bookingID', bookingsController.deleteBooking); // or patch
+bookingsRouter.put('/:bookingID', bookingsController.deleteBooking); 
 
 module.exports = bookingsRouter;
