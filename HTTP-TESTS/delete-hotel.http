@@ -1,0 +1,7 @@
+DELETE   http://localhost:5000/hotels/63972e23f87b82ad1276a1d8
+Content-Type: application/json
+
+{
+    "_id": "63972e23f87b82ad1276a1d8"
+
+}

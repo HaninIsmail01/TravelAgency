@@ -1,0 +1,11 @@
+POST http://localhost:5000/hotels
+Content-Type: application/json
+
+{
+    "name" : "ashraf",
+    "price" : "2000",
+    "services" : "full board",
+    "roomType" : "Single"
+    
+
+}
