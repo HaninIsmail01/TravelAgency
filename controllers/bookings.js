@@ -1,3 +1,5 @@
+const {validationResult} = require('express-validator');
+
 const bookingsService = require('../services/bookings');
 var ObjectID = require('mongodb').ObjectId;
 
@@ -34,6 +36,15 @@ module.exports.getBooking = async (req,res) => {
 };
 
 module.exports.postBooking = async (req,res) => {
+
+  const validationErrors = validationResult(req).array();
+    if (validationErrors.length > 0) {
+      const firstError = validationErrors[0];
+      return res.status(422).send({
+        error: firstError.msg
+      });
+    }  
+
     const bookinginfo= {
         bookingType: req.body.bookingType,
         hotel: req.body.hotel,

@@ -1,3 +1,5 @@
+const {validationResult} = require('express-validator');
+
 const ToursService = require('../services/tours');
 var ObjectID = require('mongodb').ObjectId;
 
@@ -15,6 +17,15 @@ module.exports.getTours = async (req,res) => {
 };
 
 module.exports.postTour = async (req,res) => {
+
+    const validationErrors = validationResult(req).array();
+    if (validationErrors.length > 0) {
+      const firstError = validationErrors[0];
+      return res.status(422).send({
+        error: firstError.msg
+      });
+    }  
+
     const TourInfo= {
         tourActivities: req.body.tourActivities,
         tourName: req.body.tourName,

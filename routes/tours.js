@@ -1,5 +1,7 @@
 const{Router} = require('express');
 
+const TourValidator = require('../validators/tours');
+
 const TourController = require('../controllers/tours');
 
 const TourRouter = Router();

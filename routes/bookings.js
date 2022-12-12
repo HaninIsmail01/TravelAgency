@@ -1,5 +1,7 @@
 const { Router }= require('express');
 
+const bookingsValidator = require('../validators/bookings');
+
 const bookingsController = require('../controllers/bookings');
 
 const bookingsRouter = Router();

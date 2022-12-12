@@ -1,5 +1,6 @@
-// importing the ReviewsService for the Service controller 
+
 const {validationResult} = require('express-validator');
+
 const ReviewsService = require('../services/reviews')
 var ObjectID = require('mongodb').ObjectId;
 

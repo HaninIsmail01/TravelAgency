@@ -10,4 +10,3 @@ module.exports.validatePostReview = () => {
     ];
     return ValidationMiddleWare;
 };
-// file is not yet connected with the Router or Controller
