@@ -11,7 +11,7 @@ const bookingsRouter = require('./routes/bookings');
 const ReviewsRouter = require('./routes/reviews');
 const ToursRouter = require('./routes/tours');
 const UsersRouter = require('./routes/users');
-const HotelsRouter = require('./routes/reviews');
+const HotelsRouter = require('./routes/hotels');
 
 // parsing the dotenv file, to use the environment variables.
 dotenv.config({
@@ -28,8 +28,8 @@ app.use(express.json());
 app.use('/bookings', bookingsRouter);
 app.use('/reviews', ReviewsRouter);
 app.use('/tours', ToursRouter);
-app.use('/users', UsersRouter);
-app.use('/hotels', HotelsRouter);
+//app.use('/users', UsersRouter);
+//app.use('/hotels', HotelsRouter);
 
 app.listen(PORT, async () => { 
   console.log(`listening to port number ${PORT}`);
